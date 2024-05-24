@@ -107,6 +107,24 @@ namespace proyectosql.data.datacces
 
             return personaje2;
         }
+        public int ActualizarPersonaje(int id, string nombre, string raza, int nivelPoder, string historia)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string sql = "update personajes_dragon_ball set nombre=@nombre, raza=@raza, nivel_poder=@nivelPoder,historia=@historia where id=@id";
+                using (MySqlCommand command = new MySqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+                    command.Parameters.AddWithValue("@nombre", nombre);
+                    command.Parameters.AddWithValue("@raza", raza);
+                    command.Parameters.AddWithValue("@nivelPoder", nivelPoder);
+                    command.Parameters.AddWithValue("@historia", historia);
+                    return command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 
 }

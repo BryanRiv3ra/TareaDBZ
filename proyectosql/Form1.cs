@@ -150,7 +150,25 @@ namespace proyectosql
             numericUpDown1.Value = numericUpDown1.Minimum;
             textBoxnombre.Text = "";
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(textboxid.Text);
+            string nombre = textBoxnombre.Text;
+            string raza = comboBoxraza.Text;
+            int nivelPoder = (int)numericUpDown1.Value;
+            string historia = textBoxHistoria.Text;
+            int respuesta = personaje.ActualizarPersonaje(id, nombre, raza, nivelPoder, historia);
+            if (respuesta > 0)
+            {
+                MessageBox.Show("se actualizo con exito el personaje");
+                personajes.DataSource = personaje.LeerPersonajes();
+            }
+            else
+            {
+                MessageBox.Show("ha ocurrido un error en la actualizcion");
+            }
+        }
     }
-        
  }
 

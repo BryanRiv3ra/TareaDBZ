@@ -47,8 +47,11 @@
             this.textBoxHistoria = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonLimpiar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.personajes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Prueba
@@ -134,7 +137,7 @@
             // 
             this.Crear.Location = new System.Drawing.Point(15, 280);
             this.Crear.Name = "Crear";
-            this.Crear.Size = new System.Drawing.Size(75, 23);
+            this.Crear.Size = new System.Drawing.Size(111, 23);
             this.Crear.TabIndex = 11;
             this.Crear.Text = "Crear";
             this.Crear.UseVisualStyleBackColor = true;
@@ -202,7 +205,7 @@
             // 
             this.textBoxHistoria.Location = new System.Drawing.Point(85, 218);
             this.textBoxHistoria.Name = "textBoxHistoria";
-            this.textBoxHistoria.Size = new System.Drawing.Size(126, 20);
+            this.textBoxHistoria.Size = new System.Drawing.Size(250, 20);
             this.textBoxHistoria.TabIndex = 19;
             // 
             // button1
@@ -217,19 +220,43 @@
             // 
             // buttonLimpiar
             // 
-            this.buttonLimpiar.Location = new System.Drawing.Point(147, 280);
+            this.buttonLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonLimpiar.Image = global::proyectosql.Properties.Resources._6f84657f_3edb_4a03_b27c_a3e39fd090eb;
+            this.buttonLimpiar.Location = new System.Drawing.Point(160, 280);
             this.buttonLimpiar.Name = "buttonLimpiar";
-            this.buttonLimpiar.Size = new System.Drawing.Size(75, 23);
+            this.buttonLimpiar.Size = new System.Drawing.Size(100, 23);
             this.buttonLimpiar.TabIndex = 21;
             this.buttonLimpiar.Text = "Limpiar";
             this.buttonLimpiar.UseVisualStyleBackColor = true;
             this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(85, 328);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(106, 22);
+            this.button2.TabIndex = 22;
+            this.button2.Text = "Actualizar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::proyectosql.Properties.Resources._6f0cf611_aba6_4f77_a310_a9c02d802aa9;
+            this.pictureBox1.Location = new System.Drawing.Point(291, 261);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(198, 164);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonLimpiar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxHistoria);
@@ -254,6 +281,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.personajes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,6 +308,8 @@
         private System.Windows.Forms.TextBox textBoxHistoria;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button buttonLimpiar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

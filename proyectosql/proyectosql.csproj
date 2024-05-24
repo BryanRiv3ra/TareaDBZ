@@ -118,6 +118,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -132,6 +133,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descargar.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6f84657f-3edb-4a03-b27c-a3e39fd090eb.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2024-05-24 at 2.17.36 PM.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6f0cf611-aba6-4f77-a310-a9c02d802aa9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2024-05-11 at 10.41.58 AM.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
