@@ -61,7 +61,8 @@ namespace proyectosql
             string raza = comboBoxraza.Text;
             int nivelpoder = (int)numericUpDown1.Value;
             DateTime FechaCreacion = dateTimePicker1.Value;
-            int respuesta = personaje.CrearPersonaje(nombre, raza, nivelpoder, FechaCreacion);
+            string historia = textBoxHistoria.Text;
+            int respuesta = personaje.CrearPersonaje(nombre, raza, nivelpoder, FechaCreacion, historia);
             if (respuesta > 0)
             {
                 MessageBox.Show("creado con exito");
@@ -89,11 +90,14 @@ namespace proyectosql
                 string raza = personajeencontrado.Rows[0]["raza"].ToString();
                 int nivelPoder = int.Parse(personajeencontrado.Rows[0]["nivel_poder"].ToString());
                 DateTime FechaCreacion = DateTime.Parse(personajeencontrado.Rows[0]["Fecha_Creacion"].ToString());
+                string historia = personajeencontrado.Rows[0]["Historia"].ToString();
                 textBoxnombre.Text = nombre;
                 comboBoxraza.Text = raza;
                 numericUpDown1.Value = nivelPoder;
                 dateTimePicker1.Value = FechaCreacion;
+                textBoxHistoria.Text = historia;
             }
+
             else
             {
                 MessageBox.Show("no se encontro el codigo");

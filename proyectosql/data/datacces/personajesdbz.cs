@@ -45,20 +45,20 @@ namespace proyectosql.data.datacces
 
             return personajes;
         }
-        public int CrearPersonaje(string nombre, string raza, int nivelPoder, DateTime FechaCreacion)
+        public int CrearPersonaje(string nombre, string raza, int nivelPoder, DateTime FechaCreacion, string historia)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
 
-                string sql = "INSERT INTO personajes_dragon_ball (nombre, raza, nivel_poder, Fecha_Creacion) VALUES (@nombre, @raza, @nivelPoder, @FechaCreacion)";
+                string sql = "INSERT INTO personajes_dragon_ball (nombre, raza, nivel_poder, Fecha_Creacion, Historia) VALUES (@nombre, @raza, @nivelPoder, @FechaCreacion, @Historia)";
                 using (MySqlCommand command = new MySqlCommand(sql, connection))
                 {
                     command.Parameters.AddWithValue("@nombre", nombre);
                     command.Parameters.AddWithValue("@raza", raza);
                     command.Parameters.AddWithValue("@nivelPoder", nivelPoder);
                     command.Parameters.AddWithValue("@FechaCreacion", FechaCreacion.ToString("yyyy-MM-dd HH:mm:ss"));
-
+                    command.Parameters.AddWithValue("@Historia", historia);
                     return command.ExecuteNonQuery();
                 }
             }
