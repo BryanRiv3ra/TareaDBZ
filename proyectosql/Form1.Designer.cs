@@ -46,9 +46,10 @@
             this.labelHistoria = new System.Windows.Forms.Label();
             this.textBoxHistoria = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.buttonLimpiar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonLimpiar = new System.Windows.Forms.Button();
+            this.buttonEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.personajes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,7 +69,7 @@
             // 
             this.personajes.AllowUserToOrderColumns = true;
             this.personajes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.personajes.Location = new System.Drawing.Point(394, 9);
+            this.personajes.Location = new System.Drawing.Point(420, 9);
             this.personajes.Name = "personajes";
             this.personajes.Size = new System.Drawing.Size(317, 207);
             this.personajes.TabIndex = 1;
@@ -218,21 +219,9 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // buttonLimpiar
-            // 
-            this.buttonLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonLimpiar.Image = global::proyectosql.Properties.Resources._6f84657f_3edb_4a03_b27c_a3e39fd090eb;
-            this.buttonLimpiar.Location = new System.Drawing.Point(160, 280);
-            this.buttonLimpiar.Name = "buttonLimpiar";
-            this.buttonLimpiar.Size = new System.Drawing.Size(100, 23);
-            this.buttonLimpiar.TabIndex = 21;
-            this.buttonLimpiar.Text = "Limpiar";
-            this.buttonLimpiar.UseVisualStyleBackColor = true;
-            this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(85, 328);
+            this.button2.Location = new System.Drawing.Point(12, 324);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 22);
             this.button2.TabIndex = 22;
@@ -250,11 +239,36 @@
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
+            // buttonLimpiar
+            // 
+            this.buttonLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonLimpiar.Image = global::proyectosql.Properties.Resources._6f84657f_3edb_4a03_b27c_a3e39fd090eb;
+            this.buttonLimpiar.Location = new System.Drawing.Point(160, 280);
+            this.buttonLimpiar.Name = "buttonLimpiar";
+            this.buttonLimpiar.Size = new System.Drawing.Size(100, 23);
+            this.buttonLimpiar.TabIndex = 21;
+            this.buttonLimpiar.Text = "Limpiar";
+            this.buttonLimpiar.UseVisualStyleBackColor = true;
+            this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
+            // 
+            // buttonEliminar
+            // 
+            this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonEliminar.Image = global::proyectosql.Properties.Resources._6f84657f_3edb_4a03_b27c_a3e39fd090eb;
+            this.buttonEliminar.Location = new System.Drawing.Point(160, 323);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(100, 23);
+            this.buttonEliminar.TabIndex = 24;
+            this.buttonEliminar.Text = "Eliminar";
+            this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonEliminar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.buttonLimpiar);
@@ -310,6 +324,7 @@
         private System.Windows.Forms.Button buttonLimpiar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonEliminar;
     }
 }
 

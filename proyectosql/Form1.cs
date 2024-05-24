@@ -169,6 +169,21 @@ namespace proyectosql
                 MessageBox.Show("ha ocurrido un error en la actualizcion");
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(textboxid.Text);
+            int respuesta = personaje.EliminarPersonaje(id);
+            if (respuesta > 0)
+            {
+                MessageBox.Show("Personaje eliminado exitosamente.");
+                personajes.DataSource = personaje.LeerPersonajes();
+            }
+            else
+            {
+                MessageBox.Show("No se encontró el personaje con el ID proporcionado.");
+            }
+        }
     }
  }
 

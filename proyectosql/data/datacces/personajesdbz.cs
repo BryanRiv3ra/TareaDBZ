@@ -125,6 +125,21 @@ namespace proyectosql.data.datacces
                 }
             }
         }
+        public int EliminarPersonaje(int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string sql = "DELETE FROM personajes_dragon_ball WHERE id = @id";
+                using (MySqlCommand command = new MySqlCommand(sql, connection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+
+                    return command.ExecuteNonQuery();
+                }
+            }
+        }
     }
 
 }
